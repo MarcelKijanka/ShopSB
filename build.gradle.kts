@@ -22,9 +22,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("commons-configuration:commons-configuration:1.9")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    implementation ("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.+")
     implementation("org.springframework.boot:spring-boot-test:2.3.5.RELEASE")
     implementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.junit.jupiter:junit-jupiter:5.4.0")
