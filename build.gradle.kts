@@ -19,9 +19,15 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    implementation("org.springframework.boot:spring-boot-test:2.3.5.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.junit.jupiter:junit-jupiter:5.4.0")
 }
 
 tasks.withType<Test> {
