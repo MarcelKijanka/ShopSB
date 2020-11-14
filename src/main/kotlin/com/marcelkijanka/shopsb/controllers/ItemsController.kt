@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.*
 import java.util.*
 
 @RestController
+//jeśli dobrze rozumiem tylko `/items` jest charakterystyczne dla tego controllera, a `api/` jest wspólnym subpathem dla całego backendu. 
+//Jeśli tak jest to `/api` możesz sobie ustawić w konfiguracji springa żeby nie pisać tego w każdym controllerze
+//https://stackoverflow.com/questions/28006501/how-to-specify-prefix-for-all-controllers-in-spring-boot
 @RequestMapping("api/items")
 class ItemsController(private val itemsService: ItemsService) {
-
+//brakuje mi w tym API konsekwencji, sprawdź sobie RESTful API, CRUD API i użycie http verbs
     @GetMapping
     fun getAll(pageable: Pageable): Page<Item> = itemsService.getAll(pageable)
 
