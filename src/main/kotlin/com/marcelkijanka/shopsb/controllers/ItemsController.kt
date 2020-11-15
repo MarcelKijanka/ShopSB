@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 import java.util.*
 
 @RestController
-@RequestMapping("api/items")
+@RequestMapping("items")
 class ItemsController(private val itemsService: ItemsService) {
 
     @GetMapping
