@@ -14,18 +14,18 @@ class ItemsController(private val itemsService: ItemsService) {
     @GetMapping
     fun getAll(pageable: Pageable): Page<Item> = itemsService.getAll(pageable)
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     fun getById(@PathVariable id: String): Optional<Item> = itemsService.getById(id)
 
-    @GetMapping("/name/{name}")
+    @GetMapping("/find/{name}")
     fun getByName(@PathVariable name: String): List<Item> = itemsService.getByName(name)
 
-    @PostMapping("/insert")
+    @PostMapping
     fun insert(@RequestBody item: Item): Item = itemsService.insert(item)
 
-    @PutMapping("/update")
+    @PutMapping
     fun update(@RequestBody updatedItem: Item): Item = itemsService.update(updatedItem)
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     fun delete(@PathVariable id: String): Optional<Item> = itemsService.deleteById(id)
 }
